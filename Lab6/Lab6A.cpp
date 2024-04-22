@@ -4,7 +4,7 @@ Section: WE1 C++
 Term: Summer 2021
 Instructor: Mokter Hossain
 Name: Anindita Deb
-Lab#: 6A
+Lab#: Lab6A
 */
 
 #include <iostream>
