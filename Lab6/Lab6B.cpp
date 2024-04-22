@@ -1,58 +1,34 @@
 /*
 Class: CSE 1321L
 Section: WE1 C++
-Term: Spring 2021
-Instructor: Samyuktha,Devi
+Term: Summer 2021
+Instructor: Mokter Hossain
 Name: Anindita Deb
 Lab#: Lab6B
 */
 
 #include <iostream>
-#include <string>
-
+#include <cstdlib>
+#include <ctime>
 using namespace std;
-
 
 int main()
 {
-    int num, num2;
-    int min;
-    int max;
-    min = -1000;
-    max = 1000;
-    while (min = !max) {
-        cout << "Enter a number between -1000 and +1000: ";
-        cin >> num,num2;
-        cout << "Min is " << num << endl;
-        cout << "Max is " << num << endl;
-        if (num < num2) {
-            cout << "Min is " << num2 << endl;
-            cout << "Max is " << num << endl;
-        }
-        if (num < num2) {
-            cout << "Min is " << num2 << endl;
-            cout << "Max is " << num << endl;
-        }
+    srand((unsigned) time(0));
+    int number;
+    cout << "Enter a number between 1 and 1000: ";
+    cin >> number;
+    while (number < 0 || number>1000) {
+        cout << "Invalid entry!";
+        cout << "Enter a number between 1 and 1000: ";
+        cin >> number;
     }
+    int randomNumber = -1;
+    int numberGuesses = 0;
+    while (randomNumber != number) {
+        randomNumber = (rand() % 1001);
+        cout << "My guess was " << randomNumber << endl;
+        numberGuesses++;
+    }
+    cout << "\nI guessed the number was " << number << " and it only took me " << numberGuesses << " guesses";
 }
-
-
-/*(
-int num = 0;
-int num2 = 0;
-int ans;
-
-cout << "Enter a number between -1000 and +1000: ";
-
-while (((num <1000 || num>-1000) and ((num2 < 1000) || (num2 > -1000))) {
-    cin >> ans;
-}
-if (num2 < num) {
-    cout << "Min is " << num2 << endl;
-    cout << "Max is " << num << endl;
-}
-else if (num < num2) {
-    cout << "Min is " << num2 << endl;
-    cout << "Max is " << num << endl;
-}
-)*/
