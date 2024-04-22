@@ -1,10 +1,10 @@
 /*
 Class: CSE 1321L
 Section: WE1 C++
-Term: Spring 2021
-Instructor: Samyuktha,Devi
+Term: Summer 2021
+Instructor: Mokter Hossain
 Name: Anindita Deb
-Lab#: Lab7C
+Lab#: Lab7C-1
 */
 
 #include <iostream>
