@@ -1,21 +1,33 @@
 /*
 Class: CSE 1321L
 Section: WE1 C++
-Term: Spring 2021
-Instructor: Samyuktha,Devi
+Term: Summer 2021
+Instructor: Mokter Hossain
 Name: Anindita Deb
-Lab#: Lab6A
+Lab#: 6A
 */
 
 #include <iostream>
-#include <string>
 using namespace std;
-
+class Lab6A {
+public:
+	int findMax() {
+		int number,largest=0;
+		cout << "Please enter 10 numbers and this program will display the largest.\n"<<endl;
+		for (int i=1; i <= 10; i++) {
+			cout << "Please enter number " << i << ": ";
+			cin >> number;
+			if (number > largest) {
+				largest = number;
+			}
+		}
+		return largest;
+	}
+};
 int main()
 {
-    string ans;
-    do {
-        cout << "Gimme a cookie: ";
-        getline(cin, ans);
-    } while (ans!="cookie");
+	Lab6A obj;
+	int largest_integer;
+	largest_integer = obj.findMax();
+	cout << "\nThe largest number was " << largest_integer;
 }
